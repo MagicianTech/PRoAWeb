@@ -1,0 +1,30 @@
+header{
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: inline-flex; /* Hace que el div solo ocupe el tamaño del contenido */
+    align-items: center;
+    gap: 10px;  
+}
+
+.fond-seleste{
+    background-color: #437CF7;
+}
+
+.t-blanco-seleste{
+    color: #DFF4FA;
+}
+
+.bor-radius46{
+    border-radius: 46px;
+}
+
+.titulo-header{
+    display: inline-flex; /* Hace que el div solo ocupe el tamaño del contenido */
+    align-items: center;
+    gap: 10px;  
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
