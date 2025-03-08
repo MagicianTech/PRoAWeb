@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Armata&display=swap');
+
+
+
 /* Estilos generales del header */
 header {
     display: flex;                    /* Usamos Flexbox para distribuir los elementos */
@@ -15,6 +19,11 @@ header {
     background-color: #437CF7;        /* Fondo azul claro */
     color: #DFF4FA;                   /* Color blanco claro */
     border-radius: 46px;              /* Bordes redondeados */
+}
+
+.titulo-header h1{
+    margin-left: 5px;
+    font-family:"Arimo", sans-serif;
 }
 
 /* Estilos del contenedor del botón */
