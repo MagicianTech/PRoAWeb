@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Armata&display=swap');
+
 footer {
     z-index: 30;
 }
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Armata&display=swap');
 
 h1, a {
     color: #FFFFFF;
@@ -9,6 +10,7 @@ h1, a {
     font-optical-sizing: auto;
     font-weight:lighter;
     font-style: normal;
+    margin-bottom: 0.5em;
 }
 
 .armata-regular {
@@ -59,19 +61,8 @@ h1, a {
 .footer-column ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
 .footer-column li {
     margin-bottom: 1.1em;
 }
-
-/*
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-*/
