@@ -1,0 +1,12 @@
+a{
+    list-style: none;
+    color: #ffff;
+    text-decoration: none;
+    font-size: 32px;
+}
+
+a:hover{
+    color: #437CF7;
+}
+
+

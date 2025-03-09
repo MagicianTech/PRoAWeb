@@ -36,6 +36,7 @@ header {
     height: 50px;                     /* Altura del SVG */
     width: 50px;                      /* Ancho del SVG */
     fill: #437CF7;                    /* Color del SVG */
+    mix-blend-mode: difference;
 }
 
 
@@ -52,4 +53,64 @@ header {
 
 .button:hover svg{
     fill: #DFF4FA;
+    mix-blend-mode: difference;
+}
+
+
+/* Menu */
+
+
+.menu-header{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100vh;
+    background-color: #252525;
+    z-index: 1000; /* Para que esté sobre otros elementos */
+    padding: 3%;
+}
+/*
+.input-menu-header{
+
+}
+*/
+.entradas{
+    margin-top: 15%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.listado {
+    margin-top: 15px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 15px;
+}
+
+.menu-header a{
+    color: #DFF4FA;
+    list-style: none;
+    text-decoration: none;
+    font-size: 46px;
+    font-family:"Arimo", sans-serif;
+}
+
+.menu-header a:hover{
+    color: #437CF7;
+}
+
+.byMagician{
+    position: fixed; /* Fija el elemento en la pantalla */
+    margin-bottom: 3%;
+    bottom: 0px; /* Coloca el elemento en la parte inferior */
+}
+
+@media (max-width : 1000px) {
+    .entradas{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
 }

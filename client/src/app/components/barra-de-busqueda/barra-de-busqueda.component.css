@@ -1,0 +1,39 @@
+.input {
+    display: flex;
+    width: 100%;
+}
+
+.input input{
+    border: 0;
+    outline: 0px;
+    padding-left: 2%;
+    display: inline-flex;             /* Hace que el contenedor solo ocupe el tamaño del contenido */
+    align-items: center;
+    width: 70%;
+    height: 40px;
+    border-bottom: solid 5px #ffffff;
+    background-color: rgb(244, 0, 0, 0);
+    color: #DFF4FA;
+    font-size: 15px;
+}
+
+.input input::placeholder{
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.contenedor-svg{
+    padding: 5px;
+}
+
+.contenedor-svg:hover{
+    background-color: #00000025;
+    border-radius: 5px;
+}
+
+.input img{
+    height: 35px;
+    width: 35px;
+    margin-bottom: 0%;
+    color: #DFF4FA;
+}
