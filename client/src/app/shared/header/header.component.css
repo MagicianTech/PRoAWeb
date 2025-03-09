@@ -52,16 +52,19 @@ header {
 }
 
 .button:hover svg{
-    fill: #DFF4FA;
     mix-blend-mode: difference;
 }
 
 
 /* Menu */
 
+.dysplaynone{
+    display: none;
+    fill: #DFF4FA;
+}
+
 
 .menu-header{
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -70,10 +73,16 @@ header {
     background-color: #252525;
     z-index: 1000; /* Para que esté sobre otros elementos */
     padding: 3%;
+    
 }
+
+.menu-header svg{
+    display: none;
+}
+
 /*
 .input-menu-header{
-
+    
 }
 */
 .entradas{
@@ -93,7 +102,7 @@ header {
     color: #DFF4FA;
     list-style: none;
     text-decoration: none;
-    font-size: 46px;
+    font-size: 2.5rem;
     font-family:"Arimo", sans-serif;
 }
 
@@ -107,10 +116,35 @@ header {
     bottom: 0px; /* Coloca el elemento en la parte inferior */
 }
 
-@media (max-width : 1000px) {
+@media (max-width : 800px) {
     .entradas{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
     
+    
+    .menu-header{
+        width: 100%;
+        padding-top: 15%;
+    }
+
+    .menu-header a{
+        margin-left: 5%;
+        font-size: 1.5rem;
+    }
+    
+    .menu-header svg{
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-top: 10%;
+        margin-right: 7%;
+        fill: #DFF4FA;
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+    
+
+
 }

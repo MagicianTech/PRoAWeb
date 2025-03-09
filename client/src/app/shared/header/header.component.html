@@ -1,25 +1,41 @@
 <header>
-    <div class="menu-header">
-        <div> 
-            <div>
-                <app-barra-de-busqueda class="input-menu-header"/>
-            </div>
-            <div class="entradas">
-                <div class="listado">
-                    <a href="">home</a>
-                    <a href="">Contacto</a>
-                    <a href="">Encontranos</a>
-                    <a href="">Noticias</a>
+    <div id="conteiner-header" [ngClass]="{ 'dysplaynone': !isMenuOpen }">
+        <div class="menu-header">
+            <div> 
+                <!-- Navegación -->
+                <div class="nav-header" >
+                    <button id="button-header" class="button" (click)="verHeader()">
+                        <svg [ngClass]="{ 'dysplaynone': !isMenuOpen }" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="100" height="100" viewBox="0 0 612.043 612.043" style="enable-background:new 0 0 612.043 612.043;" xml:space="preserve">
+                            <g>
+                                <g id="cross">
+                                    <g>
+                                        <path d="M397.503,306.011l195.577-195.577c25.27-25.269,25.27-66.213,0-91.482c-25.269-25.269-66.213-25.269-91.481,0     L306.022,214.551L110.445,18.974c-25.269-25.269-66.213-25.269-91.482,0s-25.269,66.213,0,91.482L214.54,306.033L18.963,501.61     c-25.269,25.269-25.269,66.213,0,91.481c25.269,25.27,66.213,25.27,91.482,0l195.577-195.576l195.577,195.576     c25.269,25.27,66.213,25.27,91.481,0c25.27-25.269,25.27-66.213,0-91.481L397.503,306.011z"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
                 </div>
-                <div class="listado">
-                    <a href="">Historia ProA</a>
-                    <a href="">Las Promos</a> 
-                    <a href="">Materias</a>
-                    <a href="">Especialidad</a>
+                <div>
+                    <app-barra-de-busqueda class="input-menu-header" />
                 </div>
-            </div>
-            <div class="byMagician">
-                <app-by-magician-tech />
+                <div class="entradas">
+                    <div class="listado">
+                        <a href="">home</a>
+                        <a href="">Contacto</a>
+                        <a href="">Encontranos</a>
+                        <a href="">Noticias</a>
+                    </div>
+                    <div class="listado">
+                        <a href="">Historia ProA</a>
+                        <a href="">Las Promos</a> 
+                        <a href="">Materias</a>
+                        <a href="">Especialidad</a>
+                    </div>
+                </div>
+                <div class="byMagician">
+                    <app-by-magician-tech />
+                </div>
             </div>
         </div>
     </div>
@@ -31,9 +47,18 @@
 
     <!-- Navegación -->
     <div class="nav-header">
-        <button id="button-header" class="button">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50" class="svg">
+        <button id="button-header" class="button" (click)="verHeader()">
+            <svg  [ngClass]="{ 'dysplaynone': isMenuOpen }" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50" class="svg">
                 <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+            </svg>
+            <svg [ngClass]="{ 'dysplaynone': !isMenuOpen }" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="100" height="100" viewBox="0 0 612.043 612.043" style="enable-background:new 0 0 612.043 612.043;" xml:space="preserve" class="svg">
+                <g>
+                    <g id="cross">
+                        <g>
+                            <path d="M397.503,306.011l195.577-195.577c25.27-25.269,25.27-66.213,0-91.482c-25.269-25.269-66.213-25.269-91.481,0     L306.022,214.551L110.445,18.974c-25.269-25.269-66.213-25.269-91.482,0s-25.269,66.213,0,91.482L214.54,306.033L18.963,501.61     c-25.269,25.269-25.269,66.213,0,91.481c25.269,25.27,66.213,25.27,91.482,0l195.577-195.576l195.577,195.576     c25.269,25.27,66.213,25.27,91.481,0c25.27-25.269,25.27-66.213,0-91.481L397.503,306.011z"/>
+                        </g>
+                    </g>
+                </g>
             </svg>
         </button>
     </div>
