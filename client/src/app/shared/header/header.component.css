@@ -1,27 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Armata&display=swap');
 
-
-
-/* Estilos generales del header */
-header {
-    display: flex;                    /* Usamos Flexbox para distribuir los elementos */
-    justify-content: space-between;    /* Distribuye el contenido entre los extremos */
-    align-items: center;              /* Alinea los items verticalmente */
-    padding: 3% 5%;                   /* Espaciado interno */
+/*Desktop*/
+header{
+    padding: 1%;
 }
 
-/* Estilos del contenedor del título y logo */
+.desplegables{
+    position: relative;
+}
+
+.contenedor-deplegable{
+    padding-top: 4px;
+}
+
+.deplegable{
+    display: grid;
+    grid-template-rows: repeat(auto auto);
+    background-color: #252525;
+    width: 20%;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.deplegable a{
+    color: #DFF4FA;
+    text-decoration: none;
+    font-family: "Arimo", sans-serif;
+    font-size: 1.5rem;
+       
+}
+
+.header-desktop{
+    padding: 1%;
+    display: grid;
+    background-color: #252525;
+    grid-template-columns: 0.6fr 1fr 1fr;
+    width: 98%;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
 .titulo-header {
     display: inline-flex;             /* Hace que el contenedor solo ocupe el tamaño del contenido */
     align-items: center;              /* Alinea los elementos del título y logo verticalmente */
-    gap: 10px;                        /* Espaciado entre el logo y el título */
-    padding: 15px 30px;               /* Espaciado interno alrededor del título y logo */
-    background-color: #437CF7;        /* Fondo azul claro */
+    gap: 10px;                        /* Espaciado entre el logo y el título */           
     color: #DFF4FA;                   /* Color blanco claro */
-    border-radius: 46px;              /* Bordes redondeados */
 }
 
-.titulo-header h1{
+.desp{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.desp a{
+    color: #DFF4FA;
+    text-decoration: none;
+    font-family: "Arimo", sans-serif;
+    font-size: 1.5rem;
+       
+}
+
+.desp a:hover{
+    color: #437CF7;
+}
+
+/*
+.header-desktop nav{
+    grid-template-columns: repeat(3, 1fr);
+}
+*/
+/*Mobile*/
+
+.mobile{
+    display: none;
+}
+/* Estilos generales del header */
+/*
+
+*/
+
+
+.titulo-header h2{
     margin-left: 5px;
     font-family:"Arimo", sans-serif;
 }
@@ -36,7 +96,7 @@ header {
     height: 50px;                     /* Altura del SVG */
     width: 50px;                      /* Ancho del SVG */
     fill: #437CF7;                    /* Color del SVG */
-    mix-blend-mode: difference;
+    /*mix-blend-mode: difference;*/
 }
 
 
@@ -117,6 +177,18 @@ header {
 }
 
 @media (max-width : 800px) {
+    .desktop{
+        display: none;
+    }
+    
+    header {
+        padding: 3% 5%;
+        display: flex;                    
+        justify-content: space-between;    
+        align-items: center;              
+        padding: 0%;                   
+    }
+
     .entradas{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -144,7 +216,19 @@ header {
         width: 40px;
         height: 40px;
     }
-    
 
+    .mobile{
+        display:contents;
+    }
 
+    /* Estilos del contenedor del título y logo */
+    .titulo-header {
+        display: inline-flex;             /* Hace que el contenedor solo ocupe el tamaño del contenido */
+        align-items: center;              /* Alinea los elementos del título y logo verticalmente */
+        gap: 10px;                        /* Espaciado entre el logo y el título */
+        padding: 10px 20px;               /* Espaciado interno alrededor del título y logo */
+        background-color: #437CF7;        /* Fondo azul claro */
+        color: #DFF4FA;                   /* Color blanco claro */
+        border-radius: 46px;              /* Bordes redondeados */
+    }
 }
