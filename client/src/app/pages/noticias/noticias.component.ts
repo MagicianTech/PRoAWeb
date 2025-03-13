@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
 
 @Component({
-  selector: 'app-promos',
+  selector: 'app-noticias',
   imports: [
     HeaderComponent
   ],
-  templateUrl: './promos.component.html',
-  styleUrl: './promos.component.css'
+  templateUrl: './noticias.component.html',
+  styleUrl: './noticias.component.css'
 })
-export class PromosComponent {
+export class NoticiasComponent {
 
 }
