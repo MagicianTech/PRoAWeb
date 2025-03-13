@@ -6,21 +6,38 @@ header{
 }
 
 .desplegables{
-    position: relative;
+}
+
+.desplegables{
+    position: fixed;
+    /*width: 60%;*/
+    right: 4.5%;
 }
 
 .contenedor-deplegable{
     padding-top: 4px;
 }
 
+.aparece{
+    display: grid;
+}
+
+.over1:hover .deplegable1{
+    display: grid;
+}
+
 .deplegable{
     display: grid;
     grid-template-rows: repeat(auto auto);
     background-color: #252525;
-    width: 20%;
-    padding: 1%;
+    width: 100%;
+    padding: 10%;
     border-radius: 10px;
+    right: 0;
 }
+
+
+
 
 .deplegable a{
     color: #DFF4FA;
@@ -28,6 +45,10 @@ header{
     font-family: "Arimo", sans-serif;
     font-size: 1.5rem;
        
+}
+
+.deplegable a:hover{
+    color: #437CF7;
 }
 
 .header-desktop{
@@ -73,6 +94,7 @@ header{
 /*Mobile*/
 
 .mobile{
+    
     display: none;
 }
 /* Estilos generales del header */
@@ -182,11 +204,9 @@ header{
     }
     
     header {
-        padding: 3% 5%;
         display: flex;                    
         justify-content: space-between;    
-        align-items: center;              
-        padding: 0%;                   
+        align-items: center;                              
     }
 
     .entradas{

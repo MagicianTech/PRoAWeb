@@ -76,19 +76,19 @@
             </div>
             <div class="desp">
                 <div>
-                    <a href="" class="over">home</a>
+                    <a href="" class="over1">home</a>
                 </div>
                 <div>
                     <a href="">Materias</a>
                     
                 </div>
                 <div>
-                    <a href="">Mas</a>
+                    <a (click)="verHeader()">Mas</a>
                     
                 </div>
             </div>
         </div>
-        <div class="desplegables">
+        <div class="desplegables" [ngClass]="{ 'dysplaynone': !isMenuOpen }">
             <div class="contenedor-deplegable">
                 <div class="deplegable">
                     <a href="">Las Tic</a>
@@ -99,12 +99,6 @@
             <div class="contenedor-deplegable">
                 <div class="deplegable">
                     <a href="">Especialidad</a>
-                    <a href="">1er año</a>
-                    <a href="">2do año</a>
-                    <a href="">3er año</a>
-                    <a href="">4to año</a>
-                    <a href="">5to año</a>
-                    <a href="">6to año</a>
                 </div>
             </div>
             <div class="contenedor-deplegable">
