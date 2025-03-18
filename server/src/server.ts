@@ -1,8 +1,9 @@
 import express, {Request, Response} from "express";
 
-const api = require('./router/api');
-const img = require('./router/img');
-const view = require('./router/view');
+
+import api from "./router/api";
+import img from "./router/img";
+import view from "./router/view";
 
 const app = express();
 

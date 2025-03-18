@@ -7,4 +7,5 @@ router.use('api/materias', (req : Request, res : Response) => {
     
 })
 
-module.exports = router;
+
+export default router;
