@@ -9,8 +9,8 @@ import { EncontranosComponent } from '../../seccion-home/encontranos/encontranos
   imports: [
     HeaderComponent,
     TicsComponent,
-    ContactoComponent,
-    EncontranosComponent
+    EncontranosComponent,
+    ContactoComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
