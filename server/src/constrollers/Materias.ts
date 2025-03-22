@@ -2,29 +2,25 @@ import { Request, Response } from 'express';
 import { mateira } from '../models/materia';
 
 
-/*
-NO ANDA 
-*/
-
 export async function CrearMateria(req: Request, res: Response): Promise<void> {
     try {
-        const { nombre, descripcion } = req.body;
+        console.log('Datos recibidos:', req.body); // Verifica qué está llegando
 
-        // Validar datos
-        if (!nombre || !descripcion) {
-            res.status(400).json({ message: 'Todos los campos son obligatorios' });
+        const { nombre, imagenProfesor, nombreProfesor, descripcion, anio } = req.body;
+
+        // Validar que todos los datos estén presentes
+        if (!nombre || !nombreProfesor || !descripcion || !anio) {
+            res.status(400).send('Todos los campos son obligatorios');
             return;
         }
 
-        // Crear un nuevo documento en la colección
-        const nuevaMateria = new materia({ 
-            nombre, 
-            descripcion 
-        });
+        // Crear el documento en MongoDB
+        const nuevaMateria = new mateira({ nombre, nombreProfesor, imagenProfesor,  descripcion, anio });
         await nuevaMateria.save();
-
-        res.status(201).json({ message: 'Materia creada con éxito', data: nuevaMateria });
+        console.log('Se envio correcramente', nuevaMateria);
+        // Redirigir a la página de éxito
+        res.redirect('/'); // O podrías redirigir a una página de confirmación
     } catch (err) {
-        res.status(500).json({ message: 'Error al crear la materia', error: (err as Error).message });
+        res.status(500).send('Error al crear la materia: ' + (err as Error).message);
     }
 }

@@ -7,11 +7,18 @@
 |
 */
 /*
+  RUTAS
+----------
 
+--Views--
 /Proa/back/view/materias
 /Proa/back/view/noticias
 /Proa/back/view/promos
-/Proa/back/view/materias
+/Proa/back/view/login
+
+--APIS--
+/Proa/back/api/
+
 
 */
 //Express
@@ -49,11 +56,7 @@ app.use('/Proa/back/api', api);
 app.use('/Proa/back/view', view);
 
 app.get('/', (req : Request, res : Response) => {
-    res.json(
-        {
-            "mensaje" : "Bienvenido al backend de WEB ProA LAFalda"
-        }
-    )
+    res.redirect('https://client-rosy-ten.vercel.app/')
 });
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
@@ -63,7 +66,9 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 // Middleware para manejar 404
 app.use((req : Request, res : Response) => {
-    res.status(404).render('404', { mensage404: "La página no fue encontrada 404" });
+    res.json({
+        message : "404 temporal"
+    })
 });
 
 app.listen(port, () => {
