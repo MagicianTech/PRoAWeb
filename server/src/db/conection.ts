@@ -1,4 +1,12 @@
-import {   } from 'mongoose';
+import mongoose from 'mongoose';
 
-const uri : string = "mongodb+srv://mgpeironeProA:HsI24pp4ioJQR7D8@proa.ir16n.mongodb.net/?retryWrites=true&w=majority&appName=ProA";
-
+export async function connectDB(uri: string): Promise<typeof mongoose> {
+    try {
+        const connection = await mongoose.connect(uri);
+        console.log('Conexión exitosa a la base de datos');
+        return connection;
+    } catch (err) {
+        console.error('Error al conectar con la base de datos:', (err as Error).message);
+        process.exit(1); // Terminar la aplicación si la conexión falla
+    }
+}
