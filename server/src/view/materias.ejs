@@ -1,6 +1,41 @@
 <%- include("comp/head") %>
 <body>
     <%- include("comp/header") %>
-    <p>¡Bienvenido a tu aplicación Express con TypeScript y EJS!</p>
+    <main>
+        <form action="/crearMaterias" method="POST">
+            <div>
+                <h1>Nombre</h1>
+                <input type="text" name="nombre" required>
+            </div>
+            <div>
+                <h1>Imagen Profesor</h1>
+                <input type="text" name="imagenProfesor">
+            </div>
+            <div>
+                <h1>Nombre del Profesor</h1>
+                <input type="text" name="nombreProfesor" required>
+            </div>
+            <div>
+                <h1>Descripción</h1>
+                <textarea name="descripcion" required></textarea>
+            </div>
+            <div>
+                <h1>Año</h1>
+                <input type="number" name="anio" required>
+            </div>
+            <br>
+            <div>
+                <button type="submit">
+                    <h1>Cargar</h1>
+                </button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <br>
+        <button>
+            <h1>Recargar</h1>
+        </button>
+    </footer>
 </body>
 </html>

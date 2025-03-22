@@ -7,10 +7,10 @@ import { CrearMateria } from '../constrollers/Materias';
 const router = express.Router();
 
 // Materias
-router.use('api/materias', )
+//router.use('api/materias', )
 
-router.get('api/crearMaterias', CrearMateria)
-router.delete('')
+router.post('/crearMaterias', CrearMateria)
+//router.delete('')
 
 
 //Promos
@@ -19,6 +19,8 @@ router.delete('')
 //Noticias
 
 
-//Buqueda
+
+
+
 
 export default router;
