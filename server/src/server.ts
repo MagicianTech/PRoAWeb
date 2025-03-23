@@ -23,6 +23,7 @@
 */
 //Express
 import express, { Request, Response, NextFunction } from "express";
+import cors from 'cors';
 //Navegacion en los Archivos del Proyecto
 import path from "path";
 import { connectDB } from './db/conection'
@@ -32,6 +33,7 @@ import dotenv from 'dotenv'
 import api from "./router/api";
 import view from "./router/view";
 //import img from "./router/img";
+
 
 dotenv.config();
 
@@ -43,12 +45,14 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'view'));
 
+app.use(cors());
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
-
+app.use(express.urlencoded({ extended: true })); // 📌 Necesario para recibir datos de formularios
 /*
 app.use('/Proa/back/img', img);
 */
@@ -61,7 +65,7 @@ app.get('/', (req : Request, res : Response) => {
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     console.error(err.stack); // Muestra el error en los registros
-    res.status(500).send('Algo salió mal!');
+    res.redirect('https://client-rosy-ten.vercel.app/')
 });
 
 // Middleware para manejar 404
