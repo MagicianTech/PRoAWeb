@@ -8,17 +8,24 @@
 */
 /*
   RUTAS
-----------
-
---Views--
-/Proa/back/view/materias
-/Proa/back/view/noticias
-/Proa/back/view/promos
-/Proa/back/view/login
-
---APIS--
-/Proa/back/api/
-
+---------->
+ 
+>    --Views--
+>       -Materias-
+            /Proa/back/view/verMatrerias
+            /Proa/back/view/CrearMaterias
+            
+>    /Proa/back/view/noticias
+>    /Proa/back/view/promos
+>    /Proa/back/view/login
+>
+>    --APIS--
+>   post para subir materias --> /Proa/back/api/crearMaterias
+>      
+>
+>   
+>
+>
 
 */
 //Express
@@ -32,6 +39,7 @@ import dotenv from 'dotenv'
 //Router
 import api from "./router/api";
 import view from "./router/view";
+import { url } from "inspector";
 //import img from "./router/img";
 
 
@@ -60,7 +68,11 @@ app.use('/Proa/back/api', api);
 app.use('/Proa/back/view', view);
 
 app.get('/', (req : Request, res : Response) => {
-    res.redirect('https://client-rosy-ten.vercel.app/')
+    //res.redirect('/Proa/back/view/login')
+    res.json({
+        url1 : "/Proa/back/view/verMatrerias",
+        url2 :  "/Proa/back/view/CrearMaterias"
+    })
 });
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {

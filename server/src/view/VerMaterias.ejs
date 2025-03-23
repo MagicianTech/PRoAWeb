@@ -1,0 +1,26 @@
+<%- include("comp/head") %>
+<body>
+    <%- include("comp/header") %>
+    <main>
+        <% if (ArrayMaterias.length > 0) { %>
+            <% ArrayMaterias.forEach(mateira => { %>
+                <br>
+                <br>
+                <div>
+                    <h1><%= mateira.nombre %></h1>
+                    <img src="<%= mateira.imgProfesor %>" alt="Imagen del profesor" style="max-height: 600px; max-width: 600px;">
+                    <h1><%= mateira.profesor %></h1>
+                    <p><%= mateira.descripcion %></p>
+                    <h1><%= mateira.anio %></h1>
+                    <h1><%= mateira.id %></h1>
+                </div>
+                <script>
+                    console.log("URL de la imagen:", "<%= mateira.imgProfesor %>");
+                </script>
+            <% }) %>
+        <% } else { %>
+            <p>No hay materias disponibles.</p>
+        <% } %>
+    </main>
+</body>
+</html>
