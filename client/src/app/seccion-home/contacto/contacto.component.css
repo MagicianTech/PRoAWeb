@@ -1,0 +1,65 @@
+
+.gallery-container {
+    background-color: #111;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-image {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.contacto {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.btn {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 12px;
+    background-color: #4a90e2;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+}
+
+
+h2 {
+    color: #DFF4FA;
+    padding-bottom: 150px;
+}

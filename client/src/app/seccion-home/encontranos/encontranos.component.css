@@ -1,0 +1,16 @@
+.ubicacion {
+    text-align: center;
+    padding: 20px;
+}
+.map-container {
+    background-color: #cce5ff;
+    padding: 0px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.map-container img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+}
