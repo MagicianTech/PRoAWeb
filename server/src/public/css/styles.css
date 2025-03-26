@@ -11,8 +11,19 @@ input{
 }
 
 header{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     background-color: brown;
     padding: 5%;
+}
+header ul{
+    padding: 1%;
+}
+
+@media (max-width : 600px ) {
+    header{
+        grid-template-columns: none;
+    }
 }
 
 header a{
@@ -20,7 +31,7 @@ header a{
 }
 
 main{
-    background-color: burlywood;
+    background-color: cadetblue;
     padding: 5%;
 }
 

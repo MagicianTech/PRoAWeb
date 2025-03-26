@@ -1,14 +1,15 @@
 import express, {Request, Response} from 'express';
 
-import { mateira } from '../models/materia';
-
+import { verMaterias } from '../constrollers/Materias';
 
 
 const router = express.Router();
 
-router.use('/materias', async (req : Request, res : Response) => {
-    res.render('materias');
-})
+router.use('/CrearMaterias', async (req : Request, res : Response) => {
+    res.render('CrearMaterias');
+});
+
+router.use('/verMatrerias', verMaterias);
 
 router.use('/noticias', async (req : Request, res : Response) => {
     res.render('noticias');

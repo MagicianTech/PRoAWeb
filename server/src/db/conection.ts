@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 export async function connectDB(uri: string): Promise<typeof mongoose> {
     try {
-        const connection = await mongoose.connect(uri);
+        const connection = await mongoose.connect(uri, { dbName: "ProA" });
         console.log('Conexión exitosa a la base de datos');
         return connection;
     } catch (err) {
