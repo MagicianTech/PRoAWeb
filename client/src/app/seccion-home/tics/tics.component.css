@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+.Contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+
+.Texto {
+    font-family: "Arimo", sans-serif;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Asegura que el texto dentro esté centrado */
+    color: #DFF4FA;
+    font-size: 24px;
+}
+.Imagen img{
+    box-shadow: 7px 2px 12.5px 14px rgba(0, 0, 0, 0.25);
+    height: 350px;
+}
+
+@media (max-width : 800px) {
+    .Contenedor {
+        display: grid;
+        grid-template-columns: 2fr 
+    }
+    
+}
