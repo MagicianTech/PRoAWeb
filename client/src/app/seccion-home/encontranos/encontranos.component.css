@@ -1,16 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Armata&display=swap');
+
 .ubicacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #cce5ff;
     text-align: center;
-    padding: 20px;
+    padding: 5%;
+    font-size: 2vh;
+    font-family: "Arimo", sans-serif;
+    color: #252525;
 }
 .map-container {
-    background-color: #cce5ff;
     padding: 0px;
     border-radius: 8px;
     text-align: center;
 }
 
-.map-container img {
+.map-container iframe    {
     width: 80%;
     max-width: 400px;
     border-radius: 8px;
+    margin-top: 5%;
+    box-shadow: #25252550 10px 10px;
+}
+
+.mtop{
+    margin-top: 10%;
+}
+
+@media (max-width : 800px) {
+    .ubicacion{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

@@ -2,7 +2,11 @@
 
 /*Desktop*/
 header{
+    position:fixed;
+    width: 98%;    
     padding: 1%;
+    top: 0;
+    z-index: 100;
 }
 
 
@@ -55,7 +59,7 @@ header{
     display: grid;
     background-color: #252525;
     grid-template-columns: 0.6fr 1fr 1fr;
-    width: 98%;
+    /*width: 98%;*/
     align-items: center;
     border-radius: 10px;
 }
@@ -116,8 +120,9 @@ header{
 .svg {
     height: 50px;                     /* Altura del SVG */
     width: 50px;                      /* Ancho del SVG */
-    fill: #437CF7;                    /* Color del SVG */
+    fill: #252525;                    /* Color del SVG */
     /*mix-blend-mode: difference;*/
+    
 }
 
 
