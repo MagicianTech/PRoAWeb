@@ -1,6 +1,6 @@
+import mongoose from 'mongoose';
 import { Request, Response } from 'express';
 import { mateira } from '../models/materia';
-
 
 export async function CrearMateria(req: Request, res: Response): Promise<void> {
     try {
@@ -39,3 +39,13 @@ export async function verMaterias(req : Request, res : Response) {
         res.status(500).send('Error al renderizar la materia: ' + (err as Error).message);
     } 
 }
+
+
+//Delete
+export const BorrarMateria = async (req: Request, res: Response)  =>  {
+
+    const { id } = req.params;
+    const materia = await mateira.findByIdAndDelete(id);
+
+    
+};
