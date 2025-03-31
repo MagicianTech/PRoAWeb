@@ -20,7 +20,8 @@
 >    /Proa/back/view/login
 >
 >    --APIS--
->   post para subir materias --> /Proa/back/api/crearMaterias
+>       - Mterias - 
+            post para subir materias --> /Proa/back/api//borrarMateria/:id
 >      
 >
 >   
