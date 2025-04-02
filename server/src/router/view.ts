@@ -1,6 +1,6 @@
 import express, {Request, Response} from 'express';
 
-import { verMaterias } from '../constrollers/Materias';
+import { BorrarMateria, verMaterias } from '../constrollers/Materias';
 
 
 const router = express.Router();
@@ -10,6 +10,10 @@ router.use('/CrearMaterias', async (req : Request, res : Response) => {
 });
 
 router.use('/verMatrerias', verMaterias);
+
+router.use('/BorrarMateria', async (req : Request, res : Response) => {
+    res.render('BorrarMateria');
+})
 
 router.use('/noticias', async (req : Request, res : Response) => {
     res.render('noticias');
