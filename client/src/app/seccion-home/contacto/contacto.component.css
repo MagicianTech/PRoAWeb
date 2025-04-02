@@ -67,3 +67,8 @@ h2 {
 .imagenes{
     
 }
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
