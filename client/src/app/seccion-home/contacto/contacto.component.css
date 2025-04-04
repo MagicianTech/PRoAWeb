@@ -1,34 +1,50 @@
 
 .gallery-container {
-    background-color: #111;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #111;
     justify-content: center;
     align-items: center;
     padding: 20px;
-}
+    position: relative;
+    border-radius: 13px;
 
+}
+.gallery-container div{
+    margin-right: 5px;
+
+}
+.imagenes{
+    padding-left: 20.7%;
+    padding-right: 20.7%;
+
+}
 .main-image {
-    width: 200px;
-    height: 200px;
-    margin-right: 10px;
-    border-radius: 8px;
+
+    width: 400px;
+    height: 400px;
+    
+    border-radius: 13px;
 }
 
 .gallery {
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 5px;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 0%;
 }
 
 .gallery img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 13px;
 }
 
 .contacto {
@@ -61,14 +77,25 @@
 
 h2 {
     color: #DFF4FA;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
+    margin-top: 100px;
 }
 
-.imagenes{
-    
+.contact-info{
+
+    margin-bottom: 50px;
 }
 
 a{
     text-decoration: none;
     color: rgb(255, 255, 255);
+}
+
+@media (max-width:800px){
+    .gallery-container{
+
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+
 }
