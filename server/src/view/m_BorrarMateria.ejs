@@ -2,9 +2,9 @@
 <body>
     <%- include("comp/header") %>
     <main>
-        <form action="/Proa/back/api/borrarMateria/<%= id %>" method="POST">
-            <h1>Borrrar ID:</h1>
-            <input type="text" name="idConfirm" id="idConfirm" required>
+        <form action="/Proa/back/api/borrarMateria/<%id%>" method="DELETE">
+            <h1>Borrar ID:</h1>
+            <input type="text" name="id" id="id" required>
             <button type="submit">Borrar</button>
         </form>
     </main>

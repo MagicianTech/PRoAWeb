@@ -9,8 +9,8 @@ const router = express.Router();
 
 // Materias
 //router.use('api/materias', )
-router.post('/crearMaterias', CrearMateria)
-router.delete('/borrarMateria/:id', BorrarMateria)
+router.post('/crearMaterias', CrearMateria);
+router.delete('/borrarMateria/:id', BorrarMateria);
 
 
 

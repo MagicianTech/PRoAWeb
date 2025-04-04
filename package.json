@@ -1,0 +1,16 @@
+{
+  "name": "proaweb",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagicianTech/PRoAWeb.git"
+  },
+  "author": "MagicianTech",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MagicianTech/PRoAWeb/issues"
+  },
+  "homepage": "https://client-rosy-ten.vercel.app/"
+}

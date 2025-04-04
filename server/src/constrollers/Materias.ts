@@ -34,7 +34,7 @@ export async function CrearMateria(req: Request, res: Response): Promise<void> {
 export async function verMaterias(req : Request, res : Response) {
     try{
         const ArrayMaterias = await mateira.find();
-        res.render('VerMaterias', {ArrayMaterias});
+        res.render('m_VerMaterias', {ArrayMaterias});
     }   catch ( err ){
         res.status(500).send('Error al renderizar la materia: ' + (err as Error).message);
     } 
@@ -42,10 +42,28 @@ export async function verMaterias(req : Request, res : Response) {
 
 
 //Delete
-export const BorrarMateria = async (req: Request, res: Response)  =>  {
+export const BorrarMateria = async (req: Request, res: Response): Promise<void> => {
+    try {
+        const { id } = req.params;
 
-    const { id } = req.params;
-    const materia = await mateira.findByIdAndDelete(id);
+        if (!id) {
+            res.status(400).json({ message: "ID es requerido" });
+            return;
+        }
 
-    
+        const materia = await mateira.findByIdAndDelete(id);
+
+        if (!materia) {
+            res.status(404).json({ message: "Materia no encontrada" });
+            return;
+        }
+
+        res.status(200).json({ message: "Materia eliminada correctamente" });
+    } catch (error) {
+        console.error("Error al borrar materia:", error);
+        res.status(500).json({ message: "Error interno del servidor" });
+    }
 };
+
+
+

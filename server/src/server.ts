@@ -1,6 +1,6 @@
 /*
 |
-|   Codigo ( Backend , Frontend )
+|   Codigo ( Backend )
 |   creado por Magician Tech para ProA la Falda
 |   
 |   2025
@@ -14,21 +14,16 @@
 >       -Materias-
             /Proa/back/view/verMatrerias
             /Proa/back/view/CrearMaterias
-            
->    /Proa/back/view/noticias
->    /Proa/back/view/promos
->    /Proa/back/view/login
->
+            /Proa/back/api/borrarMateria/:id
+
 >    --APIS--
 >       - Mterias - 
-            post para subir materias --> /Proa/back/api//borrarMateria/:id
+            post para subir materias --> /Proa/back/api/borrarMateria/:id
+>
 >      
->
->   
->
->
 
 */
+
 //Express
 import express, { Request, Response, NextFunction } from "express";
 import cors from 'cors';
@@ -71,8 +66,11 @@ app.use('/Proa/back/view', view);
 app.get('/', (req : Request, res : Response) => {
     //res.redirect('/Proa/back/view/login')
     res.json({
-        url1 : "/Proa/back/view/verMatrerias",
-        url2 :  "/Proa/back/view/CrearMaterias"
+        materias : {
+            url1 : "/Proa/back/view/verMatrerias",
+            url2 : "/Proa/back/view/CrearMaterias",
+            url3 : "/Proa/back/view/"
+        },
     })
 });
 
